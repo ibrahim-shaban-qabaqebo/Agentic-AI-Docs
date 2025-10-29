@@ -27,7 +27,8 @@ Agentic AI workflows address these limitations by enabling AI systems to execute
 
 New to agentic AI? Start here:
 
-1. **[What is Agentic AI?](what-is-agentic-ai.md)** - Begin with the fundamentals. Learn what agentic AI is, how it differs from traditional LLM usage, and why agentic workflows deliver superior results.
+1. **[What is Agentic AI?](introduction-to-agentic-ai/what-is-agentic-ai.md)** - Begin with the fundamentals. Learn what agentic AI is, how it differs from traditional LLM usage, and why agentic workflows deliver superior results.
+2. **[Benefits of Agentic Workflows](introduction-to-agentic-ai/benefits-of-agentic-workflows.md)** - Understand the key advantages of agentic workflows, including performance improvements, parallelism, and modularity.
 
 ## Documentation Structure
 
@@ -52,4 +53,4 @@ This documentation is continuously evolving. If you have suggestions, correction
 
 ---
 
-Ready to begin? Start with [What is Agentic AI?](what-is-agentic-ai.md) to understand the fundamentals.
+Ready to begin? Start with [What is Agentic AI?](introduction-to-agentic-ai/what-is-agentic-ai.md) to understand the fundamentals, then explore the [Benefits of Agentic Workflows](introduction-to-agentic-ai/benefits-of-agentic-workflows.md) to see why these approaches are so powerful.

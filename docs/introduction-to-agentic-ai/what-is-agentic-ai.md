@@ -98,13 +98,84 @@ Research agents have practical applications across various domains:
 
 ## Autonomy in Agentic Workflows
 
-Agentic workflows can vary significantly in their level of autonomy:
+### The Spectrum of Autonomy
 
-- **Highly Autonomous**: Complex workflows that execute many steps with minimal human intervention
-- **Moderately Autonomous**: Workflows that include strategic human checkpoints
-- **Low Autonomy**: Simpler workflows with frequent human oversight
+Agents can be autonomous to different degrees. Rather than viewing autonomy as a binary property—where a system is either an agent or not—it's more productive to consider autonomy as a spectrum. This perspective acknowledges that systems can be **agentic** to varying degrees, allowing us to focus on building effective systems rather than debating terminology.
 
-The degree of autonomy depends on the specific use case, complexity of the task, and the level of confidence required in the output. Simpler workflows can still provide significant value even with lower autonomy.
+The term "agentic" emerged precisely to address this nuance. By using it as an adjective rather than a binary classification, we acknowledge that different systems exhibit different levels of autonomy while recognizing that all of them contribute value to the field of agentic AI.
+
+### Less Autonomous Agents
+
+**Less autonomous agents** follow a predetermined sequence of steps, with most decisions hard-coded by the engineer. These agents typically:
+
+- Execute a fully deterministic sequence of steps
+- Have their workflow steps predetermined in advance
+- Use tools that are hard-coded by the human engineer
+- Exhibit autonomy primarily in the text the LLM generates
+
+#### Example: Essay Writing Agent with Fixed Steps
+
+Consider an agent designed to write an essay about black holes:
+
+1. **Fixed Search Generation**: The agent generates a few web search queries (LLM)
+2. **Predetermined Web Search**: Calls a web search engine (hard-coded step)
+3. **Fixed Retrieval**: Fetches web pages based on search results (hard-coded step)
+4. **Essay Generation**: Uses retrieved content to write the essay (LLM)
+
+In this less autonomous approach, the sequence is linear and deterministic—the engineer decides in advance that the agent will always search the web, fetch results, and then write the essay. This approach works well for many applications and provides predictable, reliable behavior.
+
+### More Autonomous Agents
+
+**More autonomous agents** grant the LLM decision-making authority over the workflow itself. These agents:
+
+- Allow the LLM to decide the sequence of steps dynamically
+- Let the LLM choose which tools to use and when
+- Trust the LLM to make strategic decisions about execution
+- Determine the workflow path at runtime rather than in advance
+
+#### Example: Essay Writing Agent with Dynamic Decisions
+
+For the same essay-writing task, a more autonomous agent might:
+
+1. **Dynamic Decision**: The LLM decides whether to search the web, check recent news sources, or search research paper archives
+2. **Tool Selection**: Based on the decision, the agent calls the chosen tool (e.g., web search engine)
+3. **Flexible Retrieval**: The LLM decides how many web pages to fetch or whether to convert PDFs to text
+4. **Iterative Improvement**: After writing an initial draft, the LLM decides whether to reflect and improve, fetch more information, or produce the final output
+
+In this more autonomous approach, the exact sequence of steps is determined by the LLM during execution, not predetermined by the programmer. This provides greater flexibility but requires more careful design to ensure reliability.
+
+### Highly Autonomous Agents
+
+At the far end of the spectrum, **highly autonomous agents** make extensive decisions autonomously, including:
+
+- Deciding the complete sequence of steps needed to accomplish a task
+- Choosing which tools to use and in what order
+- Creating new functions or tools when needed
+- Adapting their strategy based on intermediate results
+
+These agents represent an active area of research, as they offer the most flexibility but also present challenges in terms of controllability and predictability.
+
+### Semi-Autonomous Agents
+
+**Semi-autonomous agents** occupy the middle ground, where:
+
+- The agent can make some decisions autonomously
+- Tool selection is flexible, but tools are usually predefined
+- The workflow has some structure but allows for dynamic choices
+- Balance between control and flexibility
+
+### Choosing the Right Level of Autonomy
+
+The appropriate level of autonomy depends on your specific application:
+
+- **Less Autonomous**: Ideal when you need predictable, reliable behavior and can determine the optimal workflow in advance. Many valuable business applications exist at this end of the spectrum.
+- **More Highly Autonomous**: Suited for complex, exploratory tasks where the optimal path isn't known in advance. These systems are less easily controllable and more unpredictable, requiring active research and careful design.
+
+Throughout this documentation, you'll learn how to build applications at any point along this spectrum. Each approach has its place, and understanding when to use each level of autonomy is a key skill in building effective agentic systems.
+
+## Next Steps
+
+Now that you understand what agentic AI is and the different levels of autonomy, learn about the **[Benefits of Agentic Workflows](benefits-of-agentic-workflows.md)** to understand why these approaches are so powerful and valuable.
 
 ## Conclusion
 

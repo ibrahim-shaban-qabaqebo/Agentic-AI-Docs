@@ -14,7 +14,9 @@ copyright: Copyright &copy; 2024 Agentic AI
 
 nav:
   - Home: index.md
-  - What is Agentic AI?: what-is-agentic-ai.md
+  - Introduction to Agentic AI:
+    - What is Agentic AI?: introduction-to-agentic-ai/what-is-agentic-ai.md
+    - Benefits of Agentic Workflows: introduction-to-agentic-ai/benefits-of-agentic-workflows.md
 
 extra:
   # hide the "Made with Material for MkDocs" message
