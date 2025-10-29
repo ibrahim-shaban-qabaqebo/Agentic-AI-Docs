@@ -116,56 +116,45 @@
 
 /* Swap sidebars: TOC on left, navigation on right */
 @media screen and (min-width: 76.25em) {
-  /* Reverse the main container */
-  .md-main {
-    flex-direction: row-reverse;
-  }
-  
+  /* Reverse the main inner container */
   .md-main__inner {
     flex-direction: row-reverse;
   }
   
-  /* Move TOC sidebar to left */
+  /* Move TOC sidebar (secondary) to left side */
   .md-sidebar--secondary {
-    order: -1;
-    left: 0 !important;
+    left: 0.8rem !important;
     right: auto !important;
     border-right: 1px solid rgba(0, 0, 0, 0.07);
     border-left: none;
-    margin-right: 1.2rem;
-    margin-left: 0;
   }
   
-  /* Move navigation sidebar to right */
+  /* Move navigation sidebar (primary) to right side */
   .md-sidebar--primary {
-    order: 1;
-    right: 0 !important;
+    right: 0.8rem !important;
     left: auto !important;
     border-left: 1px solid rgba(0, 0, 0, 0.07);
     border-right: none;
-    margin-left: 1.2rem;
-    margin-right: 0;
   }
   
-  /* Ensure content stays in middle */
+  /* Adjust content margins for swapped sidebars */
   .md-content {
-    order: 0;
+    margin-left: 15.4rem; /* Space for TOC on left */
+    margin-right: 15.4rem; /* Space for nav on right */
   }
   
-  /* Adjust container for proper layout */
-  .md-container {
-    display: flex;
-    flex-direction: row-reverse;
+  /* Adjust content inner to account for swapped layout */
+  .md-content__inner {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
-/* Mobile: keep normal order */
-@media screen and (max-width: 76.1875em) {
-  .md-main {
-    flex-direction: column;
-  }
-  
-  .md-main__inner {
-    flex-direction: column;
-  }
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] .md-sidebar--secondary {
+  border-right-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-sidebar--primary {
+  border-left-color: rgba(255, 255, 255, 0.1);
 }
