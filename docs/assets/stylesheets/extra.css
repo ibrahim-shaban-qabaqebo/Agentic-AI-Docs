@@ -45,10 +45,30 @@ img.index-header {
   vertical-align: middle;
 }
 
+/* Tagline/Emphasis text (18-20px, italic) */
 .text-emphasis {
-  font-size: 1rem;
+  font-size: 1.125rem; /* ~18px */
   font-weight: 300;
   font-style: italic;
+}
+
+@media screen and (min-width: 76.25em) {
+  .text-emphasis {
+    font-size: 1.25rem; /* ~20px on larger screens */
+  }
+}
+
+/* Badge text (11-13px) */
+.badge,
+.md-typeset .badge {
+  font-size: 0.6875rem; /* ~11px */
+}
+
+@media screen and (min-width: 76.25em) {
+  .badge,
+  .md-typeset .badge {
+    font-size: 0.8125rem; /* ~13px on larger screens */
+  }
 }
 
 .filename a:hover {
@@ -85,22 +105,58 @@ img.index-header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
 }
 
+/* Top nav logo (16-18px) */
+.md-header__title {
+  font-size: 1rem; /* ~16px */
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-header__title {
+    font-size: 1.125rem; /* ~18px on larger screens */
+  }
+}
+
+/* Search placeholder (14-16px) */
+.md-search__input {
+  font-size: 0.875rem; /* ~14px */
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-search__input {
+    font-size: 1rem; /* ~16px on larger screens */
+  }
+}
+
 .md-nav__link {
   font-weight: 500;
 }
 
+/* Main title - Large display font (56-64px) */
 .md-typeset h1 {
-  font-size: 2.25rem;
+  font-size: 3.5rem; /* ~56px */
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
+@media screen and (min-width: 76.25em) {
+  .md-typeset h1 {
+    font-size: 4rem; /* ~64px on larger screens */
+  }
+}
+
+/* Section headings (28-32px) */
 .md-typeset h2 {
-  font-size: 1.75rem;
+  font-size: 1.75rem; /* ~28px */
   font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-typeset h2 {
+    font-size: 2rem; /* ~32px on larger screens */
+  }
 }
 
 .md-typeset h3 {
@@ -110,8 +166,9 @@ img.index-header {
   margin-bottom: 0.75rem;
 }
 
+/* Body text/paragraphs - 16px (standard reading size) */
 .md-typeset {
-  font-size: 0.9rem;
+  font-size: 1rem; /* 16px */
   line-height: 1.7;
 }
 
@@ -132,16 +189,29 @@ img.index-header {
   margin: 1.5em 0;
 }
 
-/* Navigation */
+/* Navigation - Sidebar section titles (13-14px) */
 .md-nav__title {
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.8125rem; /* ~13px */
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
+@media screen and (min-width: 76.25em) {
+  .md-nav__title {
+    font-size: 0.875rem; /* ~14px on larger screens */
+  }
+}
+
+/* Navigation - Menu items (14-15px) */
 .md-nav__item .md-nav__link {
-  font-size: 0.9rem;
+  font-size: 0.875rem; /* ~14px */
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-nav__item .md-nav__link {
+    font-size: 0.9375rem; /* ~15px on larger screens */
+  }
 }
 
 /* Links */
@@ -217,8 +287,14 @@ img.index-header {
     margin-bottom: 0.5rem;
   }
   
+  /* TOC heading (13-14px) */
+  .md-nav--secondary .md-nav__title {
+    font-size: 0.8125rem; /* ~13px */
+  }
+  
+  /* TOC links (14px) */
   .md-nav--secondary .md-nav__link {
-    font-size: 0.85rem;
+    font-size: 0.875rem; /* ~14px */
     padding: 0.4rem 0.8rem;
     border-radius: 4px;
     transition: background-color 0.2s;
