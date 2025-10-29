@@ -189,29 +189,47 @@ img.index-header {
   margin: 1.5em 0;
 }
 
-/* Navigation - Sidebar section titles (13-14px) */
+/* Navigation - Sidebar section titles (smaller, 11-12px) */
 .md-nav__title {
   font-weight: 600;
-  font-size: 0.8125rem; /* ~13px */
+  font-size: 0.6875rem; /* ~11px */
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 @media screen and (min-width: 76.25em) {
   .md-nav__title {
-    font-size: 0.875rem; /* ~14px on larger screens */
+    font-size: 0.75rem; /* ~12px on larger screens */
   }
 }
 
-/* Navigation - Menu items (14-15px) */
+/* Navigation - Menu items (12-13px) - simple text, no buttons */
 .md-nav__item .md-nav__link {
-  font-size: 0.875rem; /* ~14px */
+  font-size: 0.75rem; /* ~12px */
+  padding: 0.2rem 0;
+  border-radius: 0;
+  background: none;
+  transition: color 0.2s;
 }
 
 @media screen and (min-width: 76.25em) {
   .md-nav__item .md-nav__link {
-    font-size: 0.9375rem; /* ~15px on larger screens */
+    font-size: 0.8125rem; /* ~13px on larger screens */
   }
+}
+
+/* Left navigation hover - simple text highlighting */
+.md-nav__item .md-nav__link:hover {
+  background-color: transparent;
+  color: var(--md-primary-fg-color);
+  text-decoration: underline;
+}
+
+/* Left navigation active state */
+.md-nav__item .md-nav__link--active {
+  background-color: transparent;
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
 }
 
 /* Links */
@@ -282,31 +300,48 @@ img.index-header {
   /* Let Material theme handle content margins automatically */
   /* Content will automatically adjust based on sidebar widths */
   
-  /* Make TOC items collapsible/dropdown style */
+  /* Make TOC items match left navigation style */
   .md-nav--secondary .md-nav__item {
     margin-bottom: 0.5rem;
   }
   
-  /* TOC heading (10px) */
+  /* TOC heading - same as left nav (11-12px) */
   .md-nav--secondary .md-nav__title {
-    font-size: 0.625rem; /* ~10px */
+    font-size: 0.6875rem; /* ~11px */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
   
-  /* TOC links (10px) - simple text highlighting */
+  @media screen and (min-width: 76.25em) {
+    .md-nav--secondary .md-nav__title {
+      font-size: 0.75rem; /* ~12px on larger screens */
+    }
+  }
+  
+  /* TOC links - same as left nav (12-13px) - simple text, no buttons */
   .md-nav--secondary .md-nav__link {
-    font-size: 0.625rem; /* ~10px */
+    font-size: 0.75rem; /* ~12px */
     padding: 0.2rem 0;
     border-radius: 0;
     background: none;
-    transition: color 0.2s, background-color 0.2s;
+    transition: color 0.2s;
   }
   
+  @media screen and (min-width: 76.25em) {
+    .md-nav--secondary .md-nav__link {
+      font-size: 0.8125rem; /* ~13px on larger screens */
+    }
+  }
+  
+  /* TOC hover - simple text highlighting, same as left nav */
   .md-nav--secondary .md-nav__link:hover {
     background-color: transparent;
     color: var(--md-primary-fg-color);
     text-decoration: underline;
   }
   
+  /* TOC active state - same as left nav */
   .md-nav--secondary .md-nav__link--active {
     background-color: transparent;
     font-weight: 600;
@@ -345,12 +380,15 @@ img.index-header {
   border-left-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Dark mode - consistent styling for both navs */
+[data-md-color-scheme="slate"] .md-nav__item .md-nav__link:hover,
 [data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link:hover {
   background-color: transparent;
   color: var(--md-primary-fg-color);
   text-decoration: underline;
 }
 
+[data-md-color-scheme="slate"] .md-nav__item .md-nav__link--active,
 [data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link--active {
   background-color: transparent;
   font-weight: 600;
