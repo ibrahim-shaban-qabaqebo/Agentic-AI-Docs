@@ -62,11 +62,6 @@
   font-size: 0.9rem;
 }
 
-/* Cleaner spacing */
-.md-content {
-  max-width: 1200px;
-}
-
 /* Links */
 .md-typeset a {
   color: var(--md-primary-fg-color);
@@ -132,11 +127,8 @@
     border-right: none;
   }
   
-  /* Adjust content margins */
-  .md-content {
-    margin-left: 15.4rem; /* Space for nav on left */
-    margin-right: 15.4rem; /* Space for TOC on right */
-  }
+  /* Let Material theme handle content margins automatically */
+  /* Content will automatically adjust based on sidebar widths */
   
   /* Make TOC items collapsible/dropdown style */
   .md-nav--secondary .md-nav__item {
