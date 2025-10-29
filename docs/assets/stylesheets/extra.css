@@ -113,3 +113,59 @@
   background-color: var(--md-primary-fg-color);
   color: var(--md-primary-bg-color);
 }
+
+/* Swap sidebars: TOC on left, navigation on right */
+@media screen and (min-width: 76.25em) {
+  /* Reverse the main container */
+  .md-main {
+    flex-direction: row-reverse;
+  }
+  
+  .md-main__inner {
+    flex-direction: row-reverse;
+  }
+  
+  /* Move TOC sidebar to left */
+  .md-sidebar--secondary {
+    order: -1;
+    left: 0 !important;
+    right: auto !important;
+    border-right: 1px solid rgba(0, 0, 0, 0.07);
+    border-left: none;
+    margin-right: 1.2rem;
+    margin-left: 0;
+  }
+  
+  /* Move navigation sidebar to right */
+  .md-sidebar--primary {
+    order: 1;
+    right: 0 !important;
+    left: auto !important;
+    border-left: 1px solid rgba(0, 0, 0, 0.07);
+    border-right: none;
+    margin-left: 1.2rem;
+    margin-right: 0;
+  }
+  
+  /* Ensure content stays in middle */
+  .md-content {
+    order: 0;
+  }
+  
+  /* Adjust container for proper layout */
+  .md-container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+/* Mobile: keep normal order */
+@media screen and (max-width: 76.1875em) {
+  .md-main {
+    flex-direction: column;
+  }
+  
+  .md-main__inner {
+    flex-direction: column;
+  }
+}
