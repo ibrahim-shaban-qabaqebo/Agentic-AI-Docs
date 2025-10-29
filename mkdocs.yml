@@ -1,0 +1,112 @@
+site_name: Agentic AI Documentation
+site_description: Comprehensive documentation for Agentic AI platform
+site_url: https://ibrahim-shaban-qabaqebo.github.io/Agentic-AI-Docs
+repo_url: https://github.com/ibrahim-shaban-qabaqebo/Agentic-AI-Docs
+repo_name: Agentic-AI-Docs
+
+theme:
+  name: material
+  palette:
+    # Light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - navigation.instant
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - search.share
+    - toc.integrate
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+    download: material/download
+    home: material/home
+    menu: material/menu
+    previous: material/arrow-left
+    next: material/arrow-right
+    language: material/language
+    search: material/magnify
+    close: material/close
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quick-start.md
+    - Configuration: getting-started/configuration.md
+  - Guides:
+    - Email Setup: guides/email-setup.md
+    - API Usage: guides/api-usage.md
+  - Features:
+    - AI Agents: features/ai-agents.md
+    - CV Processing: features/cv-processing.md
+  - API Reference:
+    - Overview: api/overview.md
+    - Authentication: api/authentication.md
+    - Endpoints: api/endpoints.md
+  - Examples:
+    - Basic Examples: examples/basic.md
+    - Advanced Examples: examples/advanced.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ibrahim-shaban-qabaqebo
+  version:
+    provider: mike
+
+copyright: Copyright &copy; 2024 Agentic AI
