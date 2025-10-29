@@ -1,93 +1,21 @@
 site_name: Agentic AI Documentation
+
 site_description: Comprehensive documentation for Agentic AI platform
+
+strict: true
+
 site_url: https://ibrahim-shaban-qabaqebo.github.io/Agentic-AI-Docs
-repo_url: https://github.com/ibrahim-shaban-qabaqebo/Agentic-AI-Docs
+
 repo_name: Agentic-AI-Docs
 
-theme:
-  name: material
-  palette:
-    # Light mode
-    - scheme: default
-      primary: teal
-      accent: cyan
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    # Dark mode
-    - scheme: slate
-      primary: teal
-      accent: cyan
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-  font:
-    text: Roboto
-    code: Roboto Mono
-  features:
-    - navigation.sections
-    - navigation.expand
-    - navigation.top
-    - navigation.indexes
-    - navigation.instant
-    - navigation.tracking
-    - search.suggest
-    - search.highlight
-    - search.share
-    - toc.integrate
-    - content.code.copy
-    - content.code.annotate
-    - content.action.edit
-    - content.action.view
-  icon:
-    repo: fontawesome/brands/github
+repo_url: https://github.com/ibrahim-shaban-qabaqebo/Agentic-AI-Docs
 
-plugins:
-  - search
-  - minify:
-      minify_html: true
-      minify_js: true
-      minify_css: true
+edit_uri: edit/master/docs/
 
-extra_css:
-  - assets/stylesheets/extra.css
-
-markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
-      alternate_style: true
-      combine_header_slug: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.keys
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.smartsymbols
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-  - attr_list
-  - md_in_html
-  - toc:
-      permalink: true
-      toc_depth: 3
+copyright: Copyright &copy; 2024 Agentic AI
 
 nav:
-  - Home: index.md
+  - index.md
   - Getting Started:
     - Installation: getting-started/installation.md
     - Quick Start: getting-started/quick-start.md
@@ -107,11 +35,94 @@ nav:
     - Advanced Examples: examples/advanced.md
 
 extra:
+  # hide the "Made with Material for MkDocs" message
+  generator: false
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/ibrahim-shaban-qabaqebo
-  version:
-    provider: mike
-  generator: false
 
-copyright: Copyright &copy; 2024 Agentic AI
+theme:
+  name: "material"
+  custom_dir: docs/.overrides
+  palette:
+    - media: "(prefers-color-scheme)"
+      primary: pink
+      accent: pink
+      toggle:
+        icon: material/brightness-auto
+        name: "Switch to light mode"
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: pink
+      accent: pink
+      toggle:
+        icon: material/brightness-7
+        name: "Switch to dark mode"
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: pink
+      accent: pink
+      toggle:
+        icon: material/brightness-4
+        name: "Switch to system preference"
+  features:
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - navigation.path
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tracking
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+# https://www.mkdocs.org/user-guide/configuration/#validation
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+extra_css:
+  - "assets/stylesheets/extra.css"
+
+markdown_extensions:
+  - tables
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.mark
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.tilde
+  - pymdownx.inlinehilite
+  - pymdownx.highlight:
+      pygments_lang_class: true
+  - pymdownx.extra:
+      pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - sane_lists
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
