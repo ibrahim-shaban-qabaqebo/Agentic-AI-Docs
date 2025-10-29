@@ -287,26 +287,30 @@ img.index-header {
     margin-bottom: 0.5rem;
   }
   
-  /* TOC heading (13-14px) */
+  /* TOC heading (10px) */
   .md-nav--secondary .md-nav__title {
-    font-size: 0.8125rem; /* ~13px */
+    font-size: 0.625rem; /* ~10px */
   }
   
-  /* TOC links (14px) */
+  /* TOC links (10px) - simple text highlighting */
   .md-nav--secondary .md-nav__link {
-    font-size: 0.875rem; /* ~14px */
-    padding: 0.4rem 0.8rem;
-    border-radius: 4px;
-    transition: background-color 0.2s;
+    font-size: 0.625rem; /* ~10px */
+    padding: 0.2rem 0;
+    border-radius: 0;
+    background: none;
+    transition: color 0.2s, background-color 0.2s;
   }
   
   .md-nav--secondary .md-nav__link:hover {
-    background-color: rgba(0, 0, 0, 0.04);
+    background-color: transparent;
+    color: var(--md-primary-fg-color);
+    text-decoration: underline;
   }
   
   .md-nav--secondary .md-nav__link--active {
-    background-color: rgba(0, 0, 0, 0.06);
+    background-color: transparent;
     font-weight: 600;
+    color: var(--md-primary-fg-color);
   }
   
   /* Collapsible TOC sections */
@@ -342,9 +346,13 @@ img.index-header {
 }
 
 [data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: transparent;
+  color: var(--md-primary-fg-color);
+  text-decoration: underline;
 }
 
 [data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link--active {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: transparent;
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
 }
