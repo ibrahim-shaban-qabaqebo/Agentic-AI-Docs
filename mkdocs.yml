@@ -16,23 +16,6 @@ copyright: Copyright &copy; 2024 Agentic AI
 
 nav:
   - index.md
-  - Getting Started:
-    - Installation: getting-started/installation.md
-    - Quick Start: getting-started/quick-start.md
-    - Configuration: getting-started/configuration.md
-  - Guides:
-    - Email Setup: guides/email-setup.md
-    - API Usage: guides/api-usage.md
-  - Features:
-    - AI Agents: features/ai-agents.md
-    - CV Processing: features/cv-processing.md
-  - API Reference:
-    - Overview: api/overview.md
-    - Authentication: api/authentication.md
-    - Endpoints: api/endpoints.md
-  - Examples:
-    - Basic Examples: examples/basic.md
-    - Advanced Examples: examples/advanced.md
 
 extra:
   # hide the "Made with Material for MkDocs" message
