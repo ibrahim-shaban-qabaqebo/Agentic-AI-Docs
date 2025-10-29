@@ -45,29 +45,29 @@ img.index-header {
   vertical-align: middle;
 }
 
-/* Tagline/Emphasis text (18-20px, italic) */
+/* Tagline/Emphasis text (15-17px, italic) */
 .text-emphasis {
-  font-size: 1.125rem; /* ~18px */
+  font-size: 0.9375rem; /* ~15px */
   font-weight: 300;
   font-style: italic;
 }
 
 @media screen and (min-width: 76.25em) {
   .text-emphasis {
-    font-size: 1.25rem; /* ~20px on larger screens */
+    font-size: 1.0625rem; /* ~17px on larger screens */
   }
 }
 
-/* Badge text (11-13px) */
+/* Badge text (9-11px) */
 .badge,
 .md-typeset .badge {
-  font-size: 0.6875rem; /* ~11px */
+  font-size: 0.5625rem; /* ~9px */
 }
 
 @media screen and (min-width: 76.25em) {
   .badge,
   .md-typeset .badge {
-    font-size: 0.8125rem; /* ~13px on larger screens */
+    font-size: 0.6875rem; /* ~11px on larger screens */
   }
 }
 
@@ -105,25 +105,25 @@ img.index-header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
 }
 
-/* Top nav logo (16-18px) */
+/* Top nav logo (14-16px) */
 .md-header__title {
-  font-size: 1rem; /* ~16px */
-}
-
-@media screen and (min-width: 76.25em) {
-  .md-header__title {
-    font-size: 1.125rem; /* ~18px on larger screens */
-  }
-}
-
-/* Search placeholder (14-16px) */
-.md-search__input {
   font-size: 0.875rem; /* ~14px */
 }
 
 @media screen and (min-width: 76.25em) {
-  .md-search__input {
+  .md-header__title {
     font-size: 1rem; /* ~16px on larger screens */
+  }
+}
+
+/* Search placeholder (12-14px) */
+.md-search__input {
+  font-size: 0.75rem; /* ~12px */
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-search__input {
+    font-size: 0.875rem; /* ~14px on larger screens */
   }
 }
 
@@ -131,17 +131,17 @@ img.index-header {
   font-weight: 500;
 }
 
-/* Main title - 14px font */
+/* Main title - 12px font */
 .md-typeset h1 {
-  font-size: 0.875rem; /* ~14px */
+  font-size: 0.75rem; /* ~12px */
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
-/* Section headings (28-32px) */
+/* Section headings (24-28px) */
 .md-typeset h2 {
-  font-size: 1.75rem; /* ~28px */
+  font-size: 1.5rem; /* ~24px */
   font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -149,31 +149,31 @@ img.index-header {
 
 @media screen and (min-width: 76.25em) {
   .md-typeset h2 {
-    font-size: 2rem; /* ~32px on larger screens */
+    font-size: 1.75rem; /* ~28px on larger screens */
   }
 }
 
 .md-typeset h3 {
-  font-size: 1.35rem;
+  font-size: 1.125rem; /* ~18px */
   font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
 }
 
-/* Body text/paragraphs - 16px (standard reading size) */
+/* Body text/paragraphs - 14px */
 .md-typeset {
-  font-size: 1rem; /* 16px */
+  font-size: 0.875rem; /* 14px */
   line-height: 1.7;
 }
 
 .md-typeset code {
-  font-size: 0.85em;
+  font-size: 0.75em;
   padding: 0.2em 0.4em;
   border-radius: 4px;
 }
 
 .md-typeset pre > code {
-  font-size: 0.85em;
+  font-size: 0.75em;
   padding: 1em;
 }
 
@@ -183,27 +183,27 @@ img.index-header {
   margin: 1.5em 0;
 }
 
-/* Navigation - Sidebar section titles (smaller, 11-12px) */
+/* Navigation - Sidebar section titles (9-10px) */
 .md-nav__title {
   font-weight: 600;
-  font-size: 0.6875rem; /* ~11px */
+  font-size: 0.5625rem; /* ~9px */
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 @media screen and (min-width: 76.25em) {
   .md-nav__title {
-    font-size: 0.75rem; /* ~12px on larger screens */
+    font-size: 0.625rem; /* ~10px on larger screens */
   }
 }
 
-/* Navigation - Menu items (12-13px) - simple text, no buttons */
+/* Navigation - Menu items (10-11px) - simple text, no buttons */
 .md-nav__item {
   margin-bottom: 0.2rem; /* Reduced spacing between items */
 }
 
 .md-nav__item .md-nav__link {
-  font-size: 0.75rem; /* ~12px */
+  font-size: 0.625rem; /* ~10px */
   padding: 0.1rem 0; /* Reduced vertical padding */
   border-radius: 0;
   background: none;
@@ -212,7 +212,7 @@ img.index-header {
 
 @media screen and (min-width: 76.25em) {
   .md-nav__item .md-nav__link {
-    font-size: 0.8125rem; /* ~13px on larger screens */
+    font-size: 0.6875rem; /* ~11px on larger screens */
   }
 }
 
@@ -303,9 +303,9 @@ img.index-header {
     margin-bottom: 0.2rem; /* Reduced spacing between items */
   }
   
-  /* TOC heading - same as left nav (11-12px) */
+  /* TOC heading - same as left nav (9-10px) */
   .md-nav--secondary .md-nav__title {
-    font-size: 0.6875rem; /* ~11px */
+    font-size: 0.5625rem; /* ~9px */
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -313,13 +313,13 @@ img.index-header {
   
   @media screen and (min-width: 76.25em) {
     .md-nav--secondary .md-nav__title {
-      font-size: 0.75rem; /* ~12px on larger screens */
+      font-size: 0.625rem; /* ~10px on larger screens */
     }
   }
   
-  /* TOC links - same as left nav (12-13px) - simple text, no buttons */
+  /* TOC links - same as left nav (10-11px) - simple text, no buttons */
   .md-nav--secondary .md-nav__link {
-    font-size: 0.75rem; /* ~12px */
+    font-size: 0.625rem; /* ~10px */
     padding: 0.1rem 0; /* Reduced vertical padding */
     border-radius: 0;
     background: none;
@@ -328,7 +328,7 @@ img.index-header {
   
   @media screen and (min-width: 76.25em) {
     .md-nav--secondary .md-nav__link {
-      font-size: 0.8125rem; /* ~13px on larger screens */
+      font-size: 0.6875rem; /* ~11px on larger screens */
     }
   }
   
