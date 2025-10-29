@@ -1,0 +1,115 @@
+/* Pydantic AI-inspired styling */
+.md-header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.md-nav__link {
+  font-weight: 500;
+}
+
+.md-typeset h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.md-typeset h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.md-typeset h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.md-typeset {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.md-typeset code {
+  font-size: 0.85em;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+.md-typeset pre > code {
+  font-size: 0.85em;
+  padding: 1em;
+}
+
+/* Code blocks */
+.md-typeset pre {
+  border-radius: 8px;
+  margin: 1.5em 0;
+}
+
+/* Navigation */
+.md-nav__title {
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.md-nav__item .md-nav__link {
+  font-size: 0.9rem;
+}
+
+/* Cleaner spacing */
+.md-content {
+  max-width: 1200px;
+}
+
+/* Links */
+.md-typeset a {
+  color: var(--md-primary-fg-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.md-typeset a:hover {
+  border-bottom-color: var(--md-primary-fg-color);
+}
+
+/* Tables */
+.md-typeset table:not([class]) {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: rgba(0, 0, 0, 0.02);
+  font-weight: 600;
+}
+
+/* Admonitions */
+.md-typeset .admonition {
+  border-radius: 8px;
+  border-left-width: 4px;
+}
+
+/* Better code highlighting */
+.highlight {
+  margin: 0;
+}
+
+/* Button styles */
+.md-typeset .md-button {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 0.6em 1.2em;
+}
+
+.md-typeset .md-button--primary {
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}

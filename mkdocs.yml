@@ -9,18 +9,21 @@ theme:
   palette:
     # Light mode
     - scheme: default
-      primary: indigo
-      accent: indigo
+      primary: teal
+      accent: cyan
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     # Dark mode
     - scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: teal
+      accent: cyan
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
   features:
     - navigation.tabs
     - navigation.tabs.sticky
@@ -36,18 +39,10 @@ theme:
     - toc.integrate
     - content.code.copy
     - content.code.annotate
+    - content.action.edit
+    - content.action.view
   icon:
     repo: fontawesome/brands/github
-    edit: material/pencil
-    view: material/eye
-    download: material/download
-    home: material/home
-    menu: material/menu
-    previous: material/arrow-left
-    next: material/arrow-right
-    language: material/language
-    search: material/magnify
-    close: material/close
 
 plugins:
   - search
@@ -56,7 +51,12 @@ plugins:
       minify_js: true
       minify_css: true
 
+extra_css:
+  - assets/stylesheets/extra.css
+
 markdown_extensions:
+  - admonition
+  - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -73,6 +73,12 @@ markdown_extensions:
       combine_header_slug: true
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.keys
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.smartsymbols
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
@@ -108,5 +114,6 @@ extra:
       link: https://github.com/ibrahim-shaban-qabaqebo
   version:
     provider: mike
+  generator: false
 
 copyright: Copyright &copy; 2024 Agentic AI
