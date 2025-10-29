@@ -13,7 +13,8 @@ edit_uri: edit/master/docs/
 copyright: Copyright &copy; 2024 Agentic AI
 
 nav:
-  - index.md
+  - Home: index.md
+  - What is Agentic AI?: what-is-agentic-ai.md
 
 extra:
   # hide the "Made with Material for MkDocs" message
