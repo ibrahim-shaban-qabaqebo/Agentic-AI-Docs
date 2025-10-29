@@ -131,18 +131,12 @@ img.index-header {
   font-weight: 500;
 }
 
-/* Main title - Large display font (56-64px) */
+/* Main title - 14px font */
 .md-typeset h1 {
-  font-size: 3.5rem; /* ~56px */
+  font-size: 0.875rem; /* ~14px */
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
-}
-
-@media screen and (min-width: 76.25em) {
-  .md-typeset h1 {
-    font-size: 4rem; /* ~64px on larger screens */
-  }
 }
 
 /* Section headings (28-32px) */
@@ -204,9 +198,13 @@ img.index-header {
 }
 
 /* Navigation - Menu items (12-13px) - simple text, no buttons */
+.md-nav__item {
+  margin-bottom: 0.2rem; /* Reduced spacing between items */
+}
+
 .md-nav__item .md-nav__link {
   font-size: 0.75rem; /* ~12px */
-  padding: 0.2rem 0;
+  padding: 0.1rem 0; /* Reduced vertical padding */
   border-radius: 0;
   background: none;
   transition: color 0.2s;
@@ -302,7 +300,7 @@ img.index-header {
   
   /* Make TOC items match left navigation style */
   .md-nav--secondary .md-nav__item {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem; /* Reduced spacing between items */
   }
   
   /* TOC heading - same as left nav (11-12px) */
@@ -322,7 +320,7 @@ img.index-header {
   /* TOC links - same as left nav (12-13px) - simple text, no buttons */
   .md-nav--secondary .md-nav__link {
     font-size: 0.75rem; /* ~12px */
-    padding: 0.2rem 0;
+    padding: 0.1rem 0; /* Reduced vertical padding */
     border-radius: 0;
     background: none;
     transition: color 0.2s;

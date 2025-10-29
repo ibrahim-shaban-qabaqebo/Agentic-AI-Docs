@@ -1,4 +1,4 @@
-# Welcome to Agentic AI Documentation
+# Welcome to Agentic Safe Documentation
 
 Welcome! This documentation provides a comprehensive guide to understanding, designing, and implementing modern agentic AI systems. Whether you're exploring the theoretical foundations or building production-ready agentic workflows, this documentation will help you navigate the rapidly evolving landscape of agentic AI.
 
